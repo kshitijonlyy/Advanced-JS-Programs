@@ -6,7 +6,9 @@ function multiply(a,b,c){
 multiply(2,5,10);
 
 
+console.log('----------------------------------------------')
 // create a function using 'spread' operator and pass five different arguments in it while calling and print all the arguments.
+console.log('----------------------------------------------')
 
 function mySpread(...arg){
     console.log(arg);
