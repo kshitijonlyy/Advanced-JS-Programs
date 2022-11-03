@@ -11,8 +11,10 @@ location = {
     5 : 'India Gate'
 }
 
-location[6] = 'Qutub Minar';
-location[7] = 'Dal Lake';
+location[6] = 'Qutub Minar'; // adding new location
+location[7] = 'Dal Lake'; // adding new location
+
+location[2] = 'Kempty Falls'; // replacing a location
 
 console.log(location[1]);
 console.log(location[2]);
