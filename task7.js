@@ -2,6 +2,7 @@
 // (a) add 5 different songs using the push method.
 // (b) print all song names with their singers and language.
 // (c) print song_name at location 3 of the array.
+// (d) details for any one song.
 
 songs = [];
 
@@ -18,3 +19,9 @@ for (i=0; i<songs.length; i++){
 console.log('----------------------------------------------------------')
 
 console.log(songs[3]['song_name']);
+
+console.log('----------------------------------------------------------')
+
+console.log(songs[1]['song_name']);
+console.log(songs[1]['singer']);
+console.log(songs[1]['language']);
