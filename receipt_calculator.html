@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>receipt_calculator</title>
+    <style>
+        *{
+            font-family: monospace;
+        }
+        .container{
+            width: 32.8%;
+            height: 630px;
+            background-color: rgb(161, 157, 157);
+            margin-right: 0.5%;
+            float: left;
+        }
+        .head{
+            background-color: gray;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            font-size: 40px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        span{
+            display: block;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        input, select{
+            font-size: 19px;
+            margin-right: 5px;
+            height: 30px;
+            width: 250px;
+        }
+        button{
+            font-size: 20px;
+            padding: 4px 15px 4px 15px;
+        }
+        select{
+            width: 200px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .alert{
+            color: red;
+            font-size: 23px;
+            display: none;
+        }
+        #msg{
+            font-size: 18px;
+            margin-top: 0px;
+            padding-top: 10px;
+        }
+        #units{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+            width: 50px;
+        }
+        .values{
+            margin: 1px;
+            font-size: 30px;
+            width: 60px;
+            height: 50px;
+            border-radius: 5px;
+            border: transparent;
+        }
+        #alert3{
+            font-size: 18px;
+            display: block;
+            margin-top: 6px;
+            visibility: hidden;
+        }
+        #clear{
+            width: 122px;
+        }
+    </style>
+</head>
+<body onload="create()">
+    <div id="container1" class="container">
+        <div class="head">Admin</div>
+        <div class="body">
+            <span>Add a new product</span>
+            <span>
+                <input type="text" placeholder="Enter Item" id="item"><button onclick="add_prod()">Add Product</button>
+            </span>
+            <span>Select the product and add the price per unit</span>
+            <span>
+                <select id="item_list">
+                    <option selected disabled>Select</option>
+                </select>
+                <input type="text" placeholder="Enter Price" id="price"><button onclick="add_price()">Add Price</button>
+            </span>
+            <span id="alert1" class="alert"></span>
+            <span id="alert2" class="alert"></span>
+        </div>
+    </div>
+    <div id="container2" class="container">
+        <div class="head">Checkout</div>
+        <div class="body">
+            <span><button onclick="newTransaction()">New Transaction</button></span>
+            <span id="alert3" class="alert">New Transaction In Progress</span>
+            <span id="msg">Select the product and then choose the number of items.</span>
+            <span>
+                <select id="main_list">
+                    <option selected disabled>Select</option>
+                </select>
+                Units: <input placeholder="0" id="units" readonly>
+            </span>
+            <span>
+                <button id="val1" value="1" class="values" onclick="quantity(this.value)">1</button><button id="val2" value="2" class="values" onclick="quantity(this.value)">2</button><button id="val3" value="3" class="values" onclick="quantity(this.value)">3</button>
+                <br>
+                <button id="val4" value="4" class="values" onclick="quantity(this.value)">4</button><button id="val5" value="5" class="values" onclick="quantity(this.value)">5</button><button id="val6" value="6" class="values" onclick="quantity(this.value)">6</button>
+                <br>
+                <button id="val7" value="7" class="values" onclick="quantity(this.value)">7</button><button id="val8" value="8" class="values" onclick="quantity(this.value)">8</button><button id="val9" value="9" class="values" onclick="quantity(this.value)">9</button>
+                <br>
+                <button id="val0" value="0" class="values" onclick="quantity(this.value)">0</button><button id="clear" class="values" onclick="erase()">CLEAR</button>
+            </span>
+            <span>
+                <button id="add" onclick="addToCart()">Add To Cart</button>
+                <button id="pay">Pay Now</button>
+            </span>
+        </div>
+    </div>
+    <div id="container3" class="container">
+        <div class="head">Receipt</div>
+    </div>
+
+    <script src="receipt_calculator.js"></script>
+    
+</body>
+</html>
