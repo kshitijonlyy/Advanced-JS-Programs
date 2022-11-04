@@ -88,17 +88,16 @@
         <div class="body">
             <span>Add a new product</span>
             <span>
-                <input type="text" placeholder="Enter Item" id="item"><button onclick="add_prod()">Add Product</button>
+                <input type="text" placeholder="Enter Item" id="item"><button onclick="return add_prod()">Add Product</button>
             </span>
             <span>Select the product and add the price per unit</span>
             <span>
                 <select id="item_list">
                     <option selected disabled>Select</option>
                 </select>
-                <input type="text" placeholder="Enter Price" id="price"><button onclick="add_price()">Add Price</button>
+                <input type="text" placeholder="Enter Price" id="price"><button onclick="return add_price()">Add Price</button>
             </span>
             <span id="alert1" class="alert"></span>
-            <span id="alert2" class="alert"></span>
         </div>
     </div>
     <div id="container2" class="container">
@@ -133,6 +132,36 @@
     </div>
 
     <script src="receipt_calculator.js"></script>
-    
+    <script>
+        function alertTimer(){
+            document.getElementById('alert1').style.display='none';
+            document.getElementById('alert3').style.visibility='hidden';
+        }
+        
+        
+        function quantity(num){
+            document.getElementById('units').value += num;
+        }
+        function erase(){
+            document.getElementById('units').value = '';
+        }
+        function addToCart(){
+            units = parseInt(document.getElementById('units').value);
+            document.getElementById('units').value = '';
+            product = document.getElementById('main_list').value;
+            for (i=0; i<mainArray.length; i++){
+                if(product==mainArray[i]['name']){
+                    finalBill.push(mainArray[i]);
+                    for(j=0; j<finalBill.length; j++){
+                        if(product==finalBill[j]['name']){
+                            finalBill[j]['quantity'] = units;
+                        }
+                    }
+                }
+            }
+            alert('Added To Cart')
+            // console.log(finalBill);
+        }
+    </script>
 </body>
 </html>
