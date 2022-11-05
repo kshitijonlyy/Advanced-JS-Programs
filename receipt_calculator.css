@@ -1,6 +1,36 @@
+/* UNIVERSAL SELECTOR */
 *{
     font-family: monospace;
 }
+
+/* TAG SELECTORS */
+span{
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+button{
+    font-size: 20px;
+    padding: 4px 15px 4px 15px;
+}
+select{
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+table{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    margin-top: 20px;
+    border: 2;
+    border-style: ridge;
+}
+
+/* CLASS SELECTORS */
 .container{
     width: 32.8%;
     height: 640px;
@@ -17,33 +47,21 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
-span{
-    display: block;
-    font-size: 25px;
-    text-align: center;
-    margin-top: 30px;
-    font-weight: bold;
-}
-input, select{
-    font-size: 19px;
-    margin-right: 5px;
-    height: 30px;
-    width: 250px;
-}
-button{
-    font-size: 20px;
-    padding: 4px 15px 4px 15px;
-}
-select{
-    width: 200px;
-    height: 40px;
-    margin-bottom: 10px;
-}
 .alert{
     color: red;
     font-size: 23px;
     display: none;
 }
+.values{
+    margin: 1px;
+    font-size: 30px;
+    width: 60px;
+    height: 50px;
+    border-radius: 5px;
+    border: transparent;
+}
+
+/* ID SELECTORS */
 #msg{
     font-size: 18px;
     margin-top: 0px;
@@ -55,14 +73,6 @@ select{
     text-align: center;
     width: 50px;
 }
-.values{
-    margin: 1px;
-    font-size: 30px;
-    width: 60px;
-    height: 50px;
-    border-radius: 5px;
-    border: transparent;
-}
 #alert2{
     font-size: 18px;
     display: block;
@@ -71,18 +81,6 @@ select{
 }
 #clear{
     width: 122px;
-}
-table{
-    background-color: white;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 20px;
-    margin-top: 20px;
-    border: 2;
-    border-style: ridge;
-}
-td, th{
-    padding: 7px 15px 7px 15px;
 }
 #receipt{
     background-color: white;
@@ -99,4 +97,15 @@ td, th{
 }
 #bill{
     font-size: 18px;
+}
+
+/* GROUP SELECTORS */
+input, select{
+    font-size: 19px;
+    margin-right: 5px;
+    height: 30px;
+    width: 250px;
+}
+td, th{
+    padding: 7px 15px 7px 15px;
 }
