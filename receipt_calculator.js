@@ -68,7 +68,7 @@ function add_price(){
             if (mainArray.length!=0){
                 for (i=0; i<mainArray.length; i++){
                     if (mainArray[i]['name']==item){
-                        mainArray[i]['price']=parseInt(price);
+                        mainArray[i]['price'] = parseFloat(price).toFixed(2);
                         document.getElementById('alert1').style.display = 'block';
                         document.getElementById('alert1').innerHTML = 'Price Updated';
                         document.getElementById('price').value = '';
@@ -78,7 +78,7 @@ function add_price(){
                 }
             }
             tempObject['name'] = item;
-            tempObject['price'] = parseInt(price);
+            tempObject['price'] = parseFloat(price).toFixed(2);
             mainArray.push(tempObject);
             tempObject = {};
             document.getElementById('alert1').style.display = 'block';
@@ -188,19 +188,19 @@ function payNow(){
         document.getElementById('item'+[i]).innerHTML = "<td>" + arrayFinalBill[i]['name'];
         document.getElementById('item'+[i]).innerHTML += "<td>" + arrayFinalBill[i]['price'];
         document.getElementById('item'+[i]).innerHTML += "<td>" + arrayFinalBill[i]['quantity'];
-        document.getElementById('item'+[i]).innerHTML += "<td class='amount'>" + arrayFinalBill[i]['price']*arrayFinalBill[i]['quantity'];
+        document.getElementById('item'+[i]).innerHTML += "<td class='amount'>" + (arrayFinalBill[i]['price']*arrayFinalBill[i]['quantity']).toFixed(2);
     }
 
     elements = document.getElementsByClassName('amount').length;
     totalAmount = 0;
     for (j=0; j<elements; j++){
-        totalAmount += parseInt(document.getElementsByClassName('amount')[j].innerHTML);
+        totalAmount += parseFloat(document.getElementsByClassName('amount')[j].innerHTML);
     }
 
     document.getElementById('receipt').innerHTML += "<br>";
     document.getElementById('receipt').innerHTML += 'Total Amount: $' + totalAmount;
     document.getElementById('receipt').innerHTML += "<br>";
-    document.getElementById('receipt').innerHTML += 'Taxes: $' + (0.05*totalAmount);
+    document.getElementById('receipt').innerHTML += 'Taxes: $' + (0.05*totalAmount).toFixed(2);
     document.getElementById('receipt').innerHTML += "<br>";
     document.getElementById('receipt').innerHTML += "<br>";
     document.getElementById('receipt').innerHTML += 'Amount Due: $' + (totalAmount+(0.05*totalAmount));

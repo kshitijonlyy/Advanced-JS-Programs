@@ -29,6 +29,15 @@ table{
     border: 2;
     border-style: ridge;
 }
+input, select{
+    font-size: 19px;
+    margin-right: 5px;
+    height: 30px;
+    width: 250px;
+}
+td, th{
+    padding: 7px 15px 7px 15px;
+}
 
 /* CLASS SELECTORS */
 .container{
@@ -97,15 +106,4 @@ table{
 }
 #bill{
     font-size: 18px;
-}
-
-/* GROUP SELECTORS */
-input, select{
-    font-size: 19px;
-    margin-right: 5px;
-    height: 30px;
-    width: 250px;
-}
-td, th{
-    padding: 7px 15px 7px 15px;
 }
