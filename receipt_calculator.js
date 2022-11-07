@@ -15,7 +15,7 @@ function alertTimer(){
 
 // functions executed on click of 'Add Product' button.
 function add_prod(){
-    var pattern = /^[a-zA-Z]{1,}$/;
+    var pattern = /^[a-zA-Z ]{1,}$/;
     item = document.getElementById('item').value;
 
     if (pattern.test(item)){
