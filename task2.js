@@ -1,3 +1,5 @@
+// create a function and using spread operator, pass five different values to it while calling the function and print the values.
+
 function mySpread(...arg){
     console.log(arg);
 }

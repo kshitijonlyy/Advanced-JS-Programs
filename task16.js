@@ -1,4 +1,4 @@
-// 3. create a set and add 5 elements of different types.
+// create a set and add 5 elements of different types.
 
 var setOfElements = new Set();
 
