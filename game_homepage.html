@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game_homepage</title>
+    <link rel="stylesheet" href="game_styling.css">
+</head>
+<body>
+    <div id="container1" class="container">
+        <h1>FILL THE FIELDS</h1>
+        <form action="game_main.html" method="get">
+            <table cellspacing="0px">
+                <tr>
+                    <td><span id="mandatory">*</span>Name:</td>
+                    <td><input name="name" id="name" placeholder="Enter Name"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="error1" class="errors">Please Fill This Field out</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="error2" class="errors">Please Enter Alphabets Only</td>
+                </tr>
+                <tr>
+                    <td><span id="mandatory">*</span>Choose Cards:</td>
+                    <td>
+                        <select id="cards">
+                            <option selected disabled>Select</option>
+                            <option>4</option>
+                            <option>8</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="error3" class="errors">Please Select An Option</td>
+                </tr>
+                <tr>
+                    <td colspan="2" id="btn"><button onclick="return play()">PLAY</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script src="game_functioning.js"></script>
+</body>
+</html>
