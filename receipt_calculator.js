@@ -205,3 +205,10 @@ function payNow(){
     document.getElementById('receipt').innerHTML += "<br>";
     document.getElementById('receipt').innerHTML += 'Amount Due: $' + (totalAmount+(0.05*totalAmount));
 }
+
+// functions executed on click of 'Print' button.
+function printReceipt(){
+    var printing = window.open();
+    printing.document.write(document.getElementById('receipt').innerHTML);
+    printing.print()
+}

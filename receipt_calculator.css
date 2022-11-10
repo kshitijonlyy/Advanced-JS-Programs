@@ -107,3 +107,9 @@ td, th{
 #bill{
     font-size: 18px;
 }
+#print{
+    display: block;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
