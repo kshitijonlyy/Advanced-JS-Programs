@@ -44,6 +44,12 @@ function play(){
     if (checkName()==true && checkCards()==true){
         // testing.
         console.log(userDetails);
+
+        // passing the input to the next screen.
+        detailsString = JSON.stringify(userDetails);
+        localStorage.setItem('data', detailsString);
+
+        // navigating to the new screen
         window.location.assign('game_main.html');
         return true;
     }
@@ -53,6 +59,13 @@ function play(){
 }
 
 function updateStatus(){
-    console.log(userDetails);
-    document.getElementById('hello').innerHTML = 'Hello ' + userDetails['name'] + '!';
+    // getting the data from the previous screen.
+    temp = localStorage.getItem('data');
+    console.log(temp);
+    tempDetails = JSON.parse(temp);
+
+    // testing.
+    console.log(tempDetails);
+    
+    document.getElementById('hello').innerHTML = 'Hello ' + tempDetails['name'] + '!';
 }
